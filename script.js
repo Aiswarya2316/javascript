@@ -40,8 +40,14 @@
 
 
 // comparison
+// let a=20
+// let b="10"
+
+
+// logical
+
 let a=20
 let b="10"
 
-alert(a!==b)
+alert(!a==b)
     
