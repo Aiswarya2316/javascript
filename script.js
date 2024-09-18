@@ -37,5 +37,11 @@
 // b/=2
 // b%=5
 // b*=2
-alert(b)
+
+
+// comparison
+let a=20
+let b="10"
+
+alert(a!==b)
     
