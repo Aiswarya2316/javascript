@@ -41,25 +41,25 @@ function unit(){
 }
 
 function city(){
-    c=parseInt(document.getElementById("units").value)
+    c=document.getElementById("city").value
 
-    if (city=="Delhi")
+    if (c=="delhi")
         {
             document.getElementById("h1").innerHTML="redfort"
         }
    
-    else if(city=="agra") 
+    else if(c=="agra") 
         {
             document.getElementById("h1").innerHTML="Taj Mahal"
         }
             
-    else if(city=="jaipur")
+    else if(c=="jaipur")
         {
             document.getElementById("h1").innerHTML="Jal Mahal"
         }
             
     else {
-        document.getElementById("h1").innerHTML="Jal Mahal"
+        document.getElementById("h1").innerHTML="invalid"
     }
            
 }
@@ -116,4 +116,26 @@ function cost(){
     else{
         document.getElementById("h1").innerHTML='no tax'
     }
+}
+
+
+function largestfor(){
+    a=parseInt(document.getElementById("fno").value)
+    b=parseInt(document.getElementById("sno").value)
+    c=parseInt(document.getElementById("tno").value)
+    d=parseInt(document.getElementById("frno").value)
+
+    if(a>b && a>c && a>d){
+        document.getElementById("h1").innerHTML=a 
+    }
+    else if(b>a && b>c && b>d){
+        document.getElementById("h1").innerHTML=b
+    }
+    else if(c>a && c>b && c>d){
+        document.getElementById("h1").innerHTML=b
+    }
+    else{
+        document.getElementById("h1").innerHTML=d
+    }
+    
 }
