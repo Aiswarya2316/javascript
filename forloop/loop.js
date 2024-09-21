@@ -55,10 +55,9 @@ function factor(){
     a=parseInt(document.getElementById("sno").value)
     factorial=1
     do{
-        factorial*=i
-        
-        console.log(i);
-        i+=1
+        factorial=factorial*i
+        document.getElementById("h1").innerHTML=factorial
+        i++
         
 
     }
