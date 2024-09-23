@@ -12,8 +12,11 @@ function valid(){
         document.getElementById("num_error").innerHTML="invalid number"
     }
     else{
+        if(! phno.match('[6-9].{9}')){
+            document.getElementById("num_error").innerHTML="*invalid number"
         
     }
+}
     if(pin.length!=6){
         document.getElementById("pin_error").innerHTML="invalid pin"
     }
