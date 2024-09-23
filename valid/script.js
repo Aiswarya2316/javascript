@@ -11,7 +11,9 @@ function valid(){
     if(phno.length!=10){
         document.getElementById("num_error").innerHTML="invalid number"
     }
-    
+    else{
+        
+    }
     if(pin.length!=6){
         document.getElementById("pin_error").innerHTML="invalid pin"
     }
