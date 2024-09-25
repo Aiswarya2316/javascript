@@ -9,13 +9,14 @@
     </style>
 </head>
 <body>
-    <script src="script.js"></script>
-    <table border="5px" height="100px">
+    <table id="detailtable" border="5px" height="100px">
         <thead>
         <tr>
-            <th>Id</th>
             <th>Name</th>
-            <th>Age</th> 
+            <th>Age</th>
+            <th>Place</th> 
+            <th>ACtion</th> 
+
         </tr>
         </thead>
         <tbody>
@@ -28,14 +29,27 @@
     </table>
     <br><br>
     <h1>Forms</h1>
-    <form>
-        <label for="id">id</label>
-        <input type="number" id="id">
+    <form  id="submit_form">
         <label for="name">name</label>
         <input type="text" id="name">
         <label for="age">age</label>
-        <input type="number" id="age"><br><br>
+        <input type="number" id="age">
+        <label for="place">place</label>
+        <input type="text" id="place"><br><br>
         <input type="submit" value="submit">
     </form>
+
+    <h1>Forms</h1>
+    <form  id="sub_form">
+        <label for="name">name</label>
+        <input type="text" id="name">
+        <label for="age">age</label>
+        <input type="number" id="age">
+        <label for="place">place</label>
+        <input type="text" id="place"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <script src="script.js"></script>
+
 </body>
 </html>
