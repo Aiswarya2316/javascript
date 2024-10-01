@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -59,4 +59,58 @@
     <script src="./script.js"></script>
 </body>
 
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table id="tab" class="tab">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Email</td>
+                <td>Course</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <BR>
+
+
+    <form class="container" id="norm_form" style="display: grid;">
+        <h4>ADD INFO</h4>
+        <input type="tel" name="id" id="id" placeholder="Enter ID">
+        <input type="text" name="name" id="name" placeholder="Enter Name">
+        <input type="tel" name="age" id="age" placeholder="Enter Age">
+        <input type="email" name="Email" id="email" placeholder="Enter Email">
+        <input type="text" name="Course" id="course" placeholder="Enter Course">
+        <input type="date" name="date" id="date" placeholder="Enter Date">
+        <button class="btn" value="submit" >Submit</button>
+    </form>
+    <form class="container1" id="edit_form" style="margin-top: 50px; display: none;" >
+        <h4>EDIT INFO</h4>
+        <input type="tel" name="id" id="e_id" placeholder="Enter ID">
+        <input type="text" name="name" id="e_name" placeholder="Enter Name">
+        <input type="tel" name="age" id="e_age" placeholder="Enter Age">
+        <input type="email" name="Email" id="e_email" placeholder="Enter Email">
+        <input type="text" name="Course" id="e_course" placeholder="Enter Course">
+        <input type="date" name="date" id="e_date" placeholder="Enter Date">
+        <button class="btn" value="update">Submit</button>
+    </form>
+
+
+
+
+   <script src="./script.js"></script>
+</body>
 </html>
