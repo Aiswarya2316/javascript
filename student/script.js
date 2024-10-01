@@ -1,4 +1,4 @@
-let d = [
+d = [
     {id:1,name: 'anu', age: 20, Email: 'abc@gmail.com',course:'bba',date:'09/25/2003'},
     {id:2,name: 'sanu', age: 30, Email: 'al@gmail.com',course:'mba',date:'09/25/2003'},
     {id:3,name: 'manu', age: 40, Email: 'ponnu@gmail.com',course:'bca',date:'09/25/2003'}
@@ -39,18 +39,27 @@ function display(){
         t_date.textContent=element.date
         t_row.appendChild(t_date)
 
-        // const del_td=document.createElement('td')
-        // const del_btn=document.createElement('button')
-        // del_btn.textContent='delete'
-        // del_btn.onclick=function(){
-        //     delete_data(element.name)
-        // }
-        // del_td.appendChild(del_btn)
-        // t_row.appendChild(del_td)
+        const edit_td=document.createElement("td")
+        const edit_btn=document.createElement("button")
+        edit_btn.textContent="Edit"
+        edit_btn.onclick=function () {
+            edit_form(element.id)
+        }
+        edit_td.appendChild(edit_btn)
+        t_row.appendChild(edit_td)
+
+        const del_td=document.createElement('td')
+        const del_btn=document.createElement('button')
+        del_btn.textContent='delete'
+        del_btn.onclick=function(){
+            delete_data(element.name)
+        }
+        del_td.appendChild(del_btn)
+        t_row.appendChild(del_td)
 
         t_var.appendChild(t_row)
     
-    })
+    });
 
 }
 
@@ -73,14 +82,52 @@ document.getElementById('submit_form').addEventListener('submit',function(event)
 
     display()
 })
-// function delete_data(name){
-//     d=d.filter(user=>{
-//         if(user.name!=name){
-//             return user
-//         }
-//     })
-//     display()
-// }
+
+let edit_id=""
+function edit_form(id) {
+    // console.log("editing",id);
+    document.getElementById("edit_form").style.display="grid"
+    document.getElementById("submit_form").style.display="none"
+    const edit_details=d.find(user=>user.id==id)
+    document.getElementById("ed_id").value=edit_details.id
+    document.getElementById("ed_name").value=edit_details.name
+    document.getElementById("ed_age").value=edit_details.age
+    document.getElementById("ed_Email").value=edit_details.Email
+    document.getElementById("ed_course").value=edit_details.course
+    document.getElementById("ed_date").value=edit_details.date
+    edit_id=id
+    
+}
+document.getElementById("edit_form").addEventListener("submit",function (event) {
+    event.preventDefault()
+    const ed_id=document.getElementById("ed_id").value
+    const ed_name=document.getElementById("ed_name").value
+    const ed_age=document.getElementById("ed_age").value
+    const ed_Email=document.getElementById("ed_Email").value
+    const ed_course=document.getElementById("ed_course").value
+    const ed_date=document.getElementById("ed_date").value
+    // console.log(e_name,e_age,e_place);
+    data=d.map(user=>{
+        if(user.id==edit_id){
+            return {...user,id:ed_id,name:ed_name,age:ed_age,email:ed_Email,course:ed_course,date:ed_date}
+        }
+        return user
+    })
+
+    document.getElementById("edit_form").style.display="none"
+    document.getElementById("submit_form").style.display="grid"
+    display()
+
+})
+
+function delete_data(name){
+    d=d.filter(user=>{
+        if(user.name!=name){
+            return user
+        }
+    })
+    display()
+}
 
 display()
         

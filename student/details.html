@@ -4,24 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- 
-    <style>
-        .tbl {
-            width:25%; 
-            height: 100px;  
-            border-collapse: collapse; 
-            align-self: center;
-        }
-        td {
-
-            padding: 10px; 
-            text-align: left;  
-        }
-        form {
-           margin:20px;
-           background-color:azure
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css.css">
 </head>
 <body>
 
@@ -42,9 +25,11 @@
           
         </tbody>
     </table><br>
-    <form id="submit_form">
-        <label for="Id">Id</label>
-        <input type="number" id="Id"><br><br>
+     
+    <form class='container' id="submit_form" style="display:grid;">
+        <h2>Form</h2>
+        <label for="id">Id</label>
+        <input type="number" id="id"><br><br>
         <label for="age">Name</label>
         <input type="text" id="name"><br><br>
         <label for="age">age</label>
@@ -56,23 +41,21 @@
         <label for="Date">Date</label>
         <input type="date" id="date"><br><br>
         <input type="submit" value="submit">
-    </form> 
-<h3> Edit Form</h3>
-     <form id="edit_form">
-        <label for="Id">Id</label>
-        <input type="number" id="Id"><br><br>
-        <label for="age">Name</label>
-        <input type="text" id="name"><br><br>
+     </form> 
+     <form class="container1" id="edit_form" style="margin-top: 50px; display: none;" >
+        <h4> Edit Form</h4>
+        <label for="name">Name</label>
+        <input type="text" id="ed_name"><br><br>
         <label for="age">age</label>
-        <input type="number" id="age"><br><br>
+        <input type="number" id="ed_age"><br><br>
         <label for="Email">Email</label>
-        <input type="email" id="Email"><br><br>
+        <input type="email" id="ed_Email"><br><br>
         <label for="course">course</label>
-        <input type="text" id="course"><br><br>
+        <input type="text" id="ed_course"><br><br>
         <label for="Date">Date</label>
-        <input type="date" id="Date"><br><br>
+        <input type="date" id="ed_Date"><br><br>
         <input type="submit" value="submit">
-     </form>
+     </form> 
     <script src="./script.js"></script>
 </body>
 
