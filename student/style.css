@@ -8,6 +8,7 @@
     gap: 20px;
     width: 18%;
     margin-left: 40%;
+    background-color: aqua;
 }
 
 .container1{
@@ -16,6 +17,10 @@
     gap: 20px;
     width: 18%;
     margin-left: 40%;
+}
+h4{
+    font-style: italic;
+    background-color: crimson;
 }
 
 /* General table styling */
